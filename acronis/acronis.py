@@ -9,7 +9,7 @@ class Acronis:
         self._password = password
 
     def _get_auth_headers(self):
-        payload = dict(grant_type=self._grant_type.name, scope='openid')
+        payload = dict(grant_type='password', scope='openid')
         payload.update(
             dict(
                 username=self._username,
